@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cooking_name: MyString
+  user_id: 1
+  meal_date: 2013-07-21 04:43:20
+  meal_type: 1
+  assesment: 1.5
+  my_comment: MyText
+  image1: MyText
+  image2: MyText
+  image3: MyText
+  category_id: 1
+  display: false
+
+two:
+  cooking_name: MyString
+  user_id: 1
+  meal_date: 2013-07-21 04:43:20
+  meal_type: 1
+  assesment: 1.5
+  my_comment: MyText
+  image1: MyText
+  image2: MyText
+  image3: MyText
+  category_id: 1
+  display: false

@@ -1,0 +1,43 @@
+<h1>Listing cookings</h1>
+
+<table>
+  <tr>
+    <th>Cooking name</th>
+    <th>User</th>
+    <th>Meal date</th>
+    <th>Meal type</th>
+    <th>Assesment</th>
+    <th>My comment</th>
+    <th>Image1</th>
+    <th>Image2</th>
+    <th>Image3</th>
+    <th>Category</th>
+    <th>Display</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cookings.each do |cooking| %>
+  <tr>
+    <td><%= cooking.cooking_name %></td>
+    <td><%= cooking.user_id %></td>
+    <td><%= cooking.meal_date %></td>
+    <td><%= cooking.meal_type %></td>
+    <td><%= cooking.assesment %></td>
+    <td><%= cooking.my_comment %></td>
+    <td><%= cooking.image1 %></td>
+    <td><%= cooking.image2 %></td>
+    <td><%= cooking.image3 %></td>
+    <td><%= cooking.category_id %></td>
+    <td><%= cooking.display %></td>
+    <td><%= link_to 'Show', cooking %></td>
+    <td><%= link_to 'Edit', edit_cooking_path(cooking) %></td>
+    <td><%= link_to 'Destroy', cooking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cooking', new_cooking_path %>
