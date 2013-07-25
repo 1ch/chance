@@ -1,4 +1,6 @@
 class CookingsController < ApplicationController
+#skip_before_filter :authorize
+
   # GET /cookings
   # GET /cookings.json
   def index

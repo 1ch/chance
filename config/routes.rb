@@ -1,5 +1,9 @@
 Chance::Application.routes.draw do
-  get 'admin' => 'admin#index'
+  root:to => 'users#index'
+
+  get 'cooking' => 'cookings#index'
+  
+  get 'session' => 'sessions#index'
 
   controller :sessions do
     get  'login' => :new
@@ -10,9 +14,6 @@ Chance::Application.routes.draw do
   resources :users
 
   resources :cookings
-
-  root:to => 'cookings#index'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
