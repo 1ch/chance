@@ -1,10 +1,6 @@
 Chance::Application.routes.draw do
   root:to => 'users#index'
 
-  get 'cooking' => 'cookings#index'
-  
-  get 'session' => 'sessions#index'
-
   controller :sessions do
     get  'login' => :new
     post 'login' => :create
@@ -12,7 +8,6 @@ Chance::Application.routes.draw do
   end
 
   resources :users
-
   resources :cookings
 
   # The priority is based upon order of creation:
