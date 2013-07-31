@@ -2,7 +2,7 @@ require 'capistrano_colors'
 require 'bundler/capistrano'
 
 set :application, "chance"
-set :repository,  "ssh://git@github.com:1ch/chance.git"
+set :repository,  "git@github.com:1ch/chance.git"
 set :branch, "master"
 set :deploy_to, "/var/www/chance"
 set :rails_env, "production"
