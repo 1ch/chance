@@ -4,7 +4,8 @@ class CookingsController < ApplicationController
   # GET /cookings
   # GET /cookings.json
   def index
-    @cookings = Cooking.all
+#    @cookings = Cooking.all
+    @cookings = Cooking.find(:all, :conditions => { :user_id => session[:user_id] })
 
     respond_to do |format|
       format.html # index.html.erb
