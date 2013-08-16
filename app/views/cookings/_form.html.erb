@@ -15,10 +15,12 @@
     <%= f.label :cooking_name %><br />
     <%= f.text_field :cooking_name %>
   </div>
+<!--
   <div class="field">
-    <%= f.label :user_id %><br />
     <%= f.number_field :user_id %>
   </div>
+-->
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
   <div class="field">
     <%= f.label :meal_date %><br />
     <%= f.datetime_select :meal_date %>
