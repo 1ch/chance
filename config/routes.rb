@@ -1,5 +1,5 @@
 Chance::Application.routes.draw do
-  root:to => 'users#index'
+  root:to => 'cookings#index'
 
   controller :sessions do
     get  'login' => :new

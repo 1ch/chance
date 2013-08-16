@@ -1,5 +1,6 @@
 require 'capistrano_colors'
 require 'bundler/capistrano'
+require 'database_yml/capistrano'
 
 set :application, "chance"
 set :repository,  "git@github.com:1ch/chance.git"
