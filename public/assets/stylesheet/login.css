@@ -1,0 +1,41 @@
+/* layout */
+#form{
+  width: 400px;
+  margin: 30px auto;
+  padding: 10px;
+  border: 1px solid #555;
+}
+ 
+#submit{
+  text-align: center;
+  width: 220px;
+  height: 40px;
+  margin: 20px;
+}
+ 
+#title{
+  font-family: Arial;
+  font-size: 30px;
+  color: #4eb4c2;
+  margin: 20px;
+}
+
+#name{
+  font-family: Arial;
+  font-size: 20px;
+  margin-bottom: 10px;
+  float: right;
+}
+
+#password{
+  font-family: Arial;
+  font-size: 20px;
+  margin-bottom: 5px;
+  float: right;
+}
+ 
+label{
+  font-family: Arial;
+  font-size: 20px;
+  margin-bottom: 20px;
+}

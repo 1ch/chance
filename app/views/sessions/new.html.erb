@@ -1,26 +1,24 @@
-<div>
+<div id="form">
   <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
 
-  <%= form_tag do %>
-    <fieldset>
-      <legend>Please Log in</legend>
+  <div id="title">会員ログイン</div>
 
+  <%= form_tag do %>
       <div>
-        <%= label_tag :name, 'name' %>
+        <%= label_tag :name, '名前' %>
         <%= text_field_tag :name, params[:name] %>
       </div>
 
       <div>
-        <%= label_tag :password, 'password' %>
+        <%= label_tag :password, 'パスワード' %>
         <%= password_field_tag :password, params[:password] %>
       </div>
 
       <div>
-        <%= submit_tag 'Login' %>
+        <%= submit_tag 'ログイン', { :id => 'submit'} %>
       </div>
-    </fieldset>
   <% end %>
 
 <%= link_to 'New User', new_user_path %>
