@@ -1,63 +1,54 @@
-<%= form_for(@cooking) do |f| %>
-  <% if @cooking.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cooking.errors.count, "error") %> prohibited this cooking from being saved:</h2>
+<%= form_for @cooking, :mutipart => true do |f| %>
+        <% if @cooking.errors.any? %>
+                <div id="error_explanation">
+                        <h2><%= pluralize(@cooking.errors.count, "error") %> prohibited this cooking from being saved:</h2>
 
-      <ul>
-      <% @cooking.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+                        <ul>
+                                <% @cooking.errors.full_messages.each do |msg| %>
+                                        <li><%= msg %></li>
+                                <% end %>
+                        </ul>
+                </div>
+        <% end %>
 
-  <div class="field">
-    <%= f.label :cooking_name %><br />
-    <%= f.text_field :cooking_name %>
-  </div>
-<!--
-  <div class="field">
-    <%= f.number_field :user_id %>
-  </div>
--->
-    <%= f.hidden_field :user_id, :value => session[:user_id] %>
-  <div class="field">
-    <%= f.label :meal_date %><br />
-    <%= f.datetime_select :meal_date %>
-  </div>
-  <div class="field">
-    <%= f.label :meal_type %><br />
-    <%= f.number_field :meal_type %>
-  </div>
-  <div class="field">
-    <%= f.label :assesment %><br />
-    <%= f.text_field :assesment %>
-  </div>
-  <div class="field">
-    <%= f.label :my_comment %><br />
-    <%= f.text_area :my_comment %>
-  </div>
-  <div class="field">
-    <%= f.label :image1 %><br />
-    <%= f.text_area :image1 %>
-  </div>
-  <div class="field">
-    <%= f.label :image2 %><br />
-    <%= f.text_area :image2 %>
-  </div>
-  <div class="field">
-    <%= f.label :image3 %><br />
-    <%= f.text_area :image3 %>
-  </div>
-  <div class="field">
-    <%= f.label :category_id %><br />
-    <%= f.number_field :category_id %>
-  </div>
-  <div class="field">
-    <%= f.label :display %><br />
-    <%= f.check_box :display %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+        <div class="field">
+                <%= f.label :meal_name %><br />
+                <% if @cooking.cooking_name.nil? %>
+                        <%= @cooking.cooking_name = "meal name1"
+                        f.text_field :cooking_name %>
+                <% else %>
+                        <%= f.text_field :cooking_name %>
+                <% end %>
+        </div>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <div class="field">
+                <%= f.label :meal_date %><br />
+                <%= f.datetime_select :meal_date %>
+        </div>
+        <div class="field">
+                <%= f.label :meal_type %><br />
+                <%= f.radio_button 'meal_type', 1, {:checked => true} %> Breakfast <br />
+                <%= f.radio_button 'meal_type', 2 %> Lunch  <br />
+                <%= f.radio_button 'meal_type', 3 %> Dinner <br />
+                <%= f.radio_button 'meal_type', 4 %> Other  <br />
+        </div>
+        <div class="field">
+                <%= f.label :assesment %><br />
+                <%= f.select :assesment, {"1" => 1, "2" => 2, "3" => 3, "4" => 4, "5" => 5} %>
+        </div>
+        <div class="field">
+                <%= f.label :comment %><br />
+                <% if @cooking.my_comment.nil? %>
+                        <%= @cooking.my_comment = "It's delicious." %>
+                <% else %>
+                        <%= f.text_area :my_comment, :size => "30x2" %>
+                <% end %>
+        </div>
+        <div class="field">
+                <%= f.label :image %><br />
+                <%= f.file_field :temp_file %>
+        </div>
+        <div class="actions">
+                <%= f.submit 'Register', :class => 'btn btn-success' %>
+        </div>
 <% end %>

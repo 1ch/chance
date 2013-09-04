@@ -39,6 +39,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'devise'
 
 group :development do  
   gem 'capistrano'  

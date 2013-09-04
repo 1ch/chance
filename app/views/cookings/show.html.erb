@@ -1,60 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong><%= notice %></strong>
+</div>
+<div class="well">
+        <p>
+        <b>Meal name:</b>
+        <%= @cooking.cooking_name %>
+        </p>
 
-<p>
-  <b>Cooking name:</b>
-  <%= @cooking.cooking_name %>
-</p>
+        <p>
+        <b>Meal date:</b>
+        <%= @cooking.meal_date %>
+        </p>
 
-<p>
-  <b>User:</b>
-  <%= @cooking.user_id %>
-</p>
+        <p>
+        <b>Meal type:</b>
+        <% case @cooking.meal_type %>
+        <% when 1 then %>
+                Breakfast
+        <% when 2 then %>
+                Lunch
+        <% when 3 then %>
+                Dinner
+        <% when 4 then %>
+                Other
+        <% end %>
+        </p>
 
-<p>
-  <b>Meal date:</b>
-  <%= @cooking.meal_date %>
-</p>
+        <p>
+        <b>Assesment:</b>
+        <%= @cooking.assesment %>
+        </p>
 
-<p>
-  <b>Meal type:</b>
-  <%= @cooking.meal_type %>
-</p>
+        <p>
+        <b>Comment:</b>
+        <%= @cooking.my_comment %>
+        </p>
 
-<p>
-  <b>Assesment:</b>
-  <%= @cooking.assesment %>
-</p>
+        <p>
+        <b>Image:</b>
+        <%= image_tag url_for(:action => 'puts_image', :id => @cooking.id), :alt => @cooking.image1_name, :size => '100x100' %>
+        </p>
 
-<p>
-  <b>My comment:</b>
-  <%= @cooking.my_comment %>
-</p>
-
-<p>
-  <b>Image1:</b>
-  <%= @cooking.image1 %>
-</p>
-
-<p>
-  <b>Image2:</b>
-  <%= @cooking.image2 %>
-</p>
-
-<p>
-  <b>Image3:</b>
-  <%= @cooking.image3 %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @cooking.category_id %>
-</p>
-
-<p>
-  <b>Display:</b>
-  <%= @cooking.display %>
-</p>
-
-
-<%= link_to 'Edit', edit_cooking_path(@cooking) %> |
-<%= link_to 'Back', cookings_path %>
+        <%= link_to 'Edit', edit_cooking_path(@cooking), :class => 'btn btn-warning' %> |
+        <%= link_to 'Back', cookings_path, :class => 'btn btn-danger' %>
+</div>

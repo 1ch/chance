@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724141309) do
+ActiveRecord::Schema.define(:version => 20130830133141) do
 
   create_table "cookings", :force => true do |t|
     t.string   "cooking_name"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(:version => 20130724141309) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "uid"
+    t.string   "provider"
+    t.string   "access_token"
   end
 
 end

@@ -1,6 +1,11 @@
-<h1>Editing cooking</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @cooking %> |
-<%= link_to 'Back', cookings_path %>
+<div class="row">
+        <div class="col-lg-6">
+                <div class="well">
+                        <legend>Please edit your cooking</legend>
+                        <%= render 'form' %>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <%= link_to 'Back', "/cookings/", :class => 'btn btn-danger' %>
+        </div>
+</div>
