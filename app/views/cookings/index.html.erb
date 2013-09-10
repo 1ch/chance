@@ -17,7 +17,7 @@
         <tbody>
                 <tr class="active">
                         <td><%= cooking.cooking_name %></td>
-                        <td><%= cooking.meal_date.strftime("%Y/%m/%d %H:%M") %></td>
+                        <td><%= cooking.start_at.strftime("%Y/%m/%d %H:%M") %></td>
                         <% case cooking.meal_type %>
                         <% when 1 then %>
                                 <td>Breakfast</td>
