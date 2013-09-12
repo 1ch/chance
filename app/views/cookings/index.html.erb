@@ -1,11 +1,16 @@
 <div class="page-header">
         <h2>Cooking lists</h2>
 </div>
+
+<%= stylesheet_link_tag "event_calendar" %>
+<h1>Calendar</h1>
+<%= raw(event_calendar) %>
+
 <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="danger">
                 <th>Name</th>
-                <th>Date</th>
+                <th>Start Date</th>
                 <th>Type</th>
                 <th>Assesment</th>
                 <th>Comment</th>

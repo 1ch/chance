@@ -43,6 +43,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'devise'
 
+gem 'event-calendar', :require => 'event_calendar'
+
 group :development do  
   gem 'capistrano'  
   gem 'capistrano-ext'  

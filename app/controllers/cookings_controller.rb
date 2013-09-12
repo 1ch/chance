@@ -4,6 +4,11 @@ class CookingsController < ApplicationController
         def index
                 @cookings = Cooking.find( :all, :conditions => {:user_id => current_user.id } )
 
+    @month = (params[:month] || (Time.zone || Time).now.month).to_i
+    @year = (params[:year] || (Time.zone || Time).now.year).to_i
+    @shown_month = Date.civil(@year, @month)
+    @event_strips = Cooking.event_strips_for_month(@shown_month)
+
                 respond_to do |format|
                         format.html # index.html.erb
                         format.json { render json: @cookings }

@@ -53,6 +53,7 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.8)
@@ -161,6 +162,7 @@ DEPENDENCIES
   capistrano_colors
   coffee-rails (~> 3.2.1)
   devise
+  event-calendar
   execjs
   jquery-rails
   mysql2

@@ -1,8 +1,16 @@
 ---
+facebook_login.jpg: facebook_login-14fbf40bf48c4170aad6b4322805c09e.jpg
+facebook_login/index.jpg: facebook_login-14fbf40bf48c4170aad6b4322805c09e.jpg
+facebook_logout.png: facebook_logout-8525d725a436c152bb94027e24502161.png
+facebook_logout/index.png: facebook_logout-8525d725a436c152bb94027e24502161.png
+health.gif: health-60aec02679a5e5fb497fb0295aea36bd.gif
+health/index.gif: health-60aec02679a5e5fb497fb0295aea36bd.gif
+images.jpg: images-f20d2b551a6446544a7c22226735f867.jpg
+images/index.jpg: images-f20d2b551a6446544a7c22226735f867.jpg
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-54b1e068fede4333ecf24dcd25c2186f.js
-application/index.js: application-54b1e068fede4333ecf24dcd25c2186f.js
+application.js: application-246d3e722dd8a4e1801d93f84ab0666c.js
+application/index.js: application-246d3e722dd8a4e1801d93f84ab0666c.js
 application.css: application-4e1c83aee4efc6dfda6f86e06a0bab7e.css
 application/index.css: application-4e1c83aee4efc6dfda6f86e06a0bab7e.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
