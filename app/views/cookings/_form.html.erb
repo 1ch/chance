@@ -26,6 +26,10 @@
                 <%= f.datetime_select :start_at %>
         </div>
         <div class="field">
+		<%= f.label :end_at %><br />
+		<%= f.datetime_select :end_at %>
+        </div>
+        <div class="field">
                 <%= f.label :meal_type %><br />
                 <%= f.radio_button 'meal_type', 1, {:checked => true} %> Breakfast <br />
                 <%= f.radio_button 'meal_type', 2 %> Lunch  <br />
